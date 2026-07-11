@@ -21,7 +21,9 @@ without managing multiple providers, APIs, and integrations.
 
 Darvareh provides an OpenAI-compatible API endpoint:
 
+```
 https://api.darvareh.ir/v1
+```
 
 You can use existing OpenAI-compatible SDKs and frameworks with Darvareh.
 
@@ -35,7 +37,11 @@ Install the OpenAI Python SDK:
 
 ```bash
 pip install openai
-Basic Chat Completion
+```
+
+## Basic Chat Completion
+
+```python
 from openai import OpenAI
 
 client = OpenAI(
@@ -54,10 +60,15 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
-Streaming Responses
+```
+
+---
+
+# Streaming Responses
 
 Darvareh supports streaming responses through the OpenAI-compatible API.
 
+```python
 from openai import OpenAI
 
 client = OpenAI(
@@ -79,10 +90,15 @@ stream = client.chat.completions.create(
 for chunk in stream:
     if chunk.choices[0].delta.content:
         print(chunk.choices[0].delta.content, end="")
-Using AI Models
+```
+
+---
+
+# Using AI Models
 
 Darvareh provides access to multiple AI model providers through one unified API.
 
+```python
 response = client.chat.completions.create(
     model="MODEL_NAME",
     messages=[
@@ -94,13 +110,17 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
+```
 
-Replace MODEL_NAME with the model available in your Darvareh dashboard.
+Replace `MODEL_NAME` with the model available in your Darvareh dashboard.
 
-Image Generation
+---
+
+# Image Generation
 
 Example:
 
+```python
 from openai import OpenAI
 
 client = OpenAI(
@@ -114,10 +134,15 @@ image = client.images.generate(
 )
 
 print(image.data[0].url)
-LangChain Integration
+```
+
+---
+
+# LangChain Integration
 
 Darvareh works with OpenAI-compatible frameworks such as LangChain.
 
+```python
 from langchain_openai import ChatOpenAI
 
 llm = ChatOpenAI(
@@ -131,37 +156,49 @@ response = llm.invoke(
 )
 
 print(response.content)
-Supported Frameworks
+```
+
+---
+
+# Supported Frameworks
 
 Darvareh works with OpenAI-compatible tools and frameworks, including:
 
-OpenAI SDK
-LangChain
-LlamaIndex
-AI Agents
-Custom applications
-Use Cases
+- OpenAI SDK
+- LangChain
+- LlamaIndex
+- AI Agents
+- Custom applications
+
+---
+
+# Use Cases
 
 Build AI applications including:
 
-AI chat applications
-Customer support assistants
-RAG systems
-AI Agents
-Content generation platforms
-Enterprise AI applications
-Developer tools
-Features
+- AI chat applications
+- Customer support assistants
+- RAG systems
+- AI Agents
+- Content generation platforms
+- Enterprise AI applications
+- Developer tools
 
-✅ OpenAI-compatible API
-✅ Access multiple AI models through one interface
-✅ Unified authentication and billing
-✅ Intelligent model routing
-✅ Automatic fallback
-✅ Usage monitoring
-✅ Cost optimization
+---
 
-Documentation
+# Features
+
+✅ OpenAI-compatible API  
+✅ Access multiple AI models through one interface  
+✅ Unified authentication and billing  
+✅ Intelligent model routing  
+✅ Automatic fallback  
+✅ Usage monitoring  
+✅ Cost optimization  
+
+---
+
+# Documentation
 
 Documentation:
 
@@ -171,12 +208,16 @@ Website:
 
 https://darvareh.ir
 
-About Darvareh
+---
+
+# About Darvareh
 
 Darvareh is an AI Infrastructure Platform that connects software applications to the AI ecosystem through a unified API.
 
 Our mission is to simplify AI adoption by making advanced AI capabilities accessible to developers and businesses.
 
-License
+---
+
+# License
 
 This repository contains examples and integration guides provided by Darvareh.
