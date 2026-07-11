@@ -1,8 +1,22 @@
-# Darvareh Python SDK
+# Darvareh Python
 
-Official Python SDK and examples for integrating applications with Darvareh AI Infrastructure Platform.
+Python examples and integration guides for connecting applications to the Darvareh AI Infrastructure Platform.
 
-## Installation
+Darvareh provides a unified, OpenAI-compatible API that enables developers to access leading AI models through a single interface.
 
-```bash
-pip install darvareh
+## 🚀 Overview
+
+With Darvareh, developers can build AI-powered applications using:
+
+- Text generation models
+- Image generation models
+- Audio models
+- Video models
+- Reasoning models
+- AI Agents and RAG applications
+
+without managing multiple providers, APIs, and integrations.
+
+## 🔗 API Endpoint
+
+Darvareh provides an OpenAI-compatible API endpoint:
