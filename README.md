@@ -20,8 +20,8 @@ without managing multiple providers, APIs, and integrations.
 ## 🔗 API Endpoint
 
 Darvareh provides an OpenAI-compatible API endpoint:
-https://api.darvareh.ir/v1
 
+https://api.darvareh.ir/v1
 
 You can use existing OpenAI-compatible SDKs and frameworks with Darvareh.
 
@@ -35,9 +35,7 @@ Install the OpenAI Python SDK:
 
 ```bash
 pip install openai
-
-## Basic Chat Completion
-
+Basic Chat Completion
 from openai import OpenAI
 
 client = OpenAI(
@@ -56,9 +54,8 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
+Streaming Responses
 
-
-## Streaming Responses
 Darvareh supports streaming responses through the OpenAI-compatible API.
 
 from openai import OpenAI
@@ -82,8 +79,8 @@ stream = client.chat.completions.create(
 for chunk in stream:
     if chunk.choices[0].delta.content:
         print(chunk.choices[0].delta.content, end="")
+Using AI Models
 
-## Using AI Models
 Darvareh provides access to multiple AI model providers through one unified API.
 
 response = client.chat.completions.create(
@@ -98,11 +95,10 @@ response = client.chat.completions.create(
 
 print(response.choices[0].message.content)
 
-## Replace:
-MODEL_NAME
-with the model available in your Darvareh dashboard.
+Replace MODEL_NAME with the model available in your Darvareh dashboard.
 
-## Image Generation
+Image Generation
+
 Example:
 
 from openai import OpenAI
@@ -118,8 +114,8 @@ image = client.images.generate(
 )
 
 print(image.data[0].url)
+LangChain Integration
 
-## LangChain Integration
 Darvareh works with OpenAI-compatible frameworks such as LangChain.
 
 from langchain_openai import ChatOpenAI
@@ -135,9 +131,17 @@ response = llm.invoke(
 )
 
 print(response.content)
+Supported Frameworks
 
+Darvareh works with OpenAI-compatible tools and frameworks, including:
 
-## Use Cases
+OpenAI SDK
+LangChain
+LlamaIndex
+AI Agents
+Custom applications
+Use Cases
+
 Build AI applications including:
 
 AI chat applications
@@ -157,18 +161,22 @@ Features
 ✅ Usage monitoring
 ✅ Cost optimization
 
-## Documentation
+Documentation
 
 Documentation:
+
 https://hub.darvareh.ir
 
 Website:
+
 https://darvareh.ir
 
-## About Darvareh
+About Darvareh
+
 Darvareh is an AI Infrastructure Platform that connects software applications to the AI ecosystem through a unified API.
+
 Our mission is to simplify AI adoption by making advanced AI capabilities accessible to developers and businesses.
 
-## License
+License
 
 This repository contains examples and integration guides provided by Darvareh.
