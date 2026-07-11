@@ -20,8 +20,6 @@ without managing multiple providers, APIs, and integrations.
 ## 🔗 API Endpoint
 
 Darvareh provides an OpenAI-compatible API endpoint:
-
-
 https://api.darvareh.ir/v1
 
 
@@ -37,7 +35,9 @@ Install the OpenAI Python SDK:
 
 ```bash
 pip install openai
+
 Basic Chat Completion
+
 from openai import OpenAI
 
 client = OpenAI(
@@ -56,6 +56,8 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
+
+
 Streaming Responses
 
 Darvareh supports streaming responses through the OpenAI-compatible API.
@@ -81,6 +83,7 @@ stream = client.chat.completions.create(
 for chunk in stream:
     if chunk.choices[0].delta.content:
         print(chunk.choices[0].delta.content, end="")
+
 Using AI Models
 
 Darvareh provides access to multiple AI model providers through one unified API.
@@ -98,7 +101,6 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 
 Replace:
-
 MODEL_NAME
 
 with the model available in your Darvareh dashboard.
@@ -120,6 +122,7 @@ image = client.images.generate(
 )
 
 print(image.data[0].url)
+
 LangChain Integration
 
 Darvareh works with OpenAI-compatible frameworks such as LangChain.
@@ -137,6 +140,8 @@ response = llm.invoke(
 )
 
 print(response.content)
+
+
 Use Cases
 
 Build AI applications including:
